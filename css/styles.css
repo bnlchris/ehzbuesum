@@ -1,0 +1,311 @@
+/* General Styles */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styles for links */
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	color: GoldenRod;
+}
+
+a:focus {
+	color: GoldenRod;
+}
+
+/* Styles for data fetches */
+
+.data {
+	text-align: left;
+}
+
+.data p {
+	display: inline;
+}
+
+/* Background image for main page */
+
+#bg {
+	position: fixed; 
+  	top: -50%; 
+  	left: -50%; 
+  	width: 200%; 
+  	height: 200%;
+}
+
+#bg img {
+	position: absolute; 
+  	top: 0; 
+  	left: 0; 
+  	right: 0; 
+  	bottom: 0; 
+  	margin: auto; 
+  	min-width: 50%;
+  	min-height: 50%;
+}
+
+/* Background styling for other sites */
+
+.content-other {
+	font-family: sans-serif;
+	color: white;
+	background-color: black;
+	opacity: 0.9;
+	font-size: 1.3em;
+	position: relative;
+	padding-top: 25px;
+	padding-bottom: 75px;
+	width: 75%;
+	margin: auto;
+	text-align: center;
+	z-index: 0;
+	padding-left: 20px;
+  	padding-right: 20px;
+  	margin-top: 60px;
+}
+
+.title-other {
+	font-family: 'Dancing Script', cursive;
+	color: white;
+	font-size: 1.8em;
+	position: relative;
+}
+
+.content-other p, h4, h6 {
+	text-align: left;
+}
+
+/* Header */
+
+nav {
+	background-color: black;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 70px;
+	z-index: 1;
+}
+
+.menu_icon {
+	cursor: pointer;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 15px;
+	z-index: 2;
+}
+
+.menu_icon:hover {
+	background-color: GoldenRod;
+}
+
+.menu_icon:focus {
+	background-color: GoldenRod;
+}
+
+.icon_line {
+	width: 35px;
+  	height: 5px;
+  	background-color: white;
+  	margin: 6px 0;
+}
+
+/* Menu */
+
+.menu {
+	background-color: black;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	margin-top: 60px;
+	z-index: 1;
+	visibility: hidden;
+}
+
+.menu.show {
+	visibility: visible;
+}
+
+.menu a {
+	float: none;
+	display: block;
+	color: white;
+	text-align: left;
+	text-decoration: none;
+	font-size: 30px;
+	padding: 15px;
+}
+
+.menu a:hover {
+	background-color: GoldenRod;
+	color: black;
+}
+
+.menu a:focus {
+	background-color: GoldenRod;
+	color: black;
+}
+
+/* Toggle Font size */
+
+.change_font_size {
+	cursor: pointer;
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 15px;
+	z-index: 2;
+}
+
+.change_font_size:hover {
+	background-color: GoldenRod;
+}
+
+.change_font_size:focus {
+	background-color: GoldenRod;
+}
+
+.change_font_size i {
+	color: white;
+	font-size: 35px;
+}
+
+.content-other.big {
+	font-size: 1.5em;
+	width: 80%;
+}
+
+/* Main */
+
+main {
+	width: 100%;
+	min-height: 900px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.title {
+	font-family: 'Dancing Script', cursive;
+	color: black;
+	font-size: 1.8em;
+	position: relative;
+	padding-top: 200px;
+}
+
+.content {
+	font-family: sans-serif;
+	color: black;
+	font-size: 1.3em;
+	position: relative;
+	padding-top: 25px;
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	z-index: 0;
+}
+
+.content p {
+	text-align: left;
+}
+
+.content h1 {
+	font-size: 1.3em;
+}
+
+.content a {
+	color: black;
+}
+
+.content a:hover {
+	color: GoldenRod;
+}
+
+.content a:focus {
+	color: GoldenRod;
+}
+
+/* Footer CSS */
+
+footer {
+	display: flex;
+	background-color: black;
+	color: white;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin: auto;
+}
+
+.column {
+	flex:50%;
+	padding: 10px;
+	text-align: center;
+}
+
+.column h5 {
+	cursor: pointer;
+}
+
+/* DSGVO pop-up */
+
+.dsgvo {
+	background-color: black;
+	color: white;
+	z-index: 2;
+	width: 100;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 30px;
+	visibility: visible;
+}
+
+.dsgvo.done {
+	visibility: hidden;
+}
+
+button {
+	background-color: white;
+	cursor: pointer;
+	border: black;
+	min-width: 100px;
+	height: 30px;
+	margin: 10px;
+}
+
+button:hover {
+	background-color: GoldenRod;
+}
+
+button:focus {
+	background-color: GoldenRod;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 800px) {
+
+		.title-other {
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+
+		.title-other {
+		font-size: 1.0em;
+	}
+}
