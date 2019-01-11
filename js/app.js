@@ -1,37 +1,37 @@
-// Set session to keep track of first visit (for pop-up)
+// Show DSGVO pop-up only on first visit
+
+const dsgvo = document.querySelector('#dsgvo');
+
 window.onload = () => {
-	
-	if (localStorage.getItem('hasBeenRun') === null) {
+
+	if (localStorage.getItem('secondVisit') !== 'true') {
 		showDsgvo();
+	} else {
+		dsgvo.className = 'dsgvo.done';
 	}
 }
 
-/*
-// Show DSGVO pop-up when page has loaded
-window.onload = showDsgvo();
-*/
-
 function showDsgvo() {
 	//show only on first visit
-		const dsgvo = document.querySelector('#dsgvo');
 		dsgvo.className = 'dsgvo';
+		localStorage.setItem('secondVisit', 'true');
 }
 
 // Get rid of pop-up
-const dsgvo = document.querySelector('#dsgvo');
 
 const buttonOkay = document.querySelector('.okay');
 buttonOkay.addEventListener('click', () => {
 	dsgvo.className = 'dsgvo.done';
-	localStorage.setItem('firstVisit', 'no');
+	localStorage.setItem('secondVisit', 'true');
 })
 
 const buttonNo = document.querySelector('.not-okay');
 buttonNo.addEventListener('click', () => {
 	dsgvo.className = 'dsgvo.done';
 	location.href = 'datenschutz.html';
-	localStorage.setItem('firstVisit', 'no');
+	localStorage.setItem('secondVisit', 'true');
 })
+
 
 
 // Fetch data
