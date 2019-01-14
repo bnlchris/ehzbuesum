@@ -1,8 +1,15 @@
-// Show DSGVO pop-up only on first visit
+// Call these functions on page load
+function pageLoad () {
+	checkDsgvo();
+	addData();
+}
 
+window.onload = pageLoad;
+
+// Show DSGVO pop-up only on first visit
 const dsgvo = document.querySelector('#dsgvo');
 
-window.onload = () => {
+function checkDsgvo() {
 
 	if (localStorage.getItem('secondVisit') !== 'true') {
 		showDsgvo();
@@ -32,21 +39,26 @@ buttonNo.addEventListener('click', () => {
 	localStorage.setItem('secondVisit', 'true');
 })
 
-
-
 // Fetch data
 function addData() { 
 	
 	// Data to impressum
 
-	glv.forEach(function(mitglied) {
+	if (document.body.className === 'fetchData') {
+
+		glv.forEach(function(mitglied) {
 		let newP = document.createElement('p');
 		let newContent = document.createTextNode(mitglied);
 		let newLine = document.createElement('br');
 		newP.appendChild(newContent);
 		newP.appendChild(newLine);
 		document.getElementById("glv").appendChild(newP);
-	})
+		})
+
+	} else {
+		console.log('Works on Impressum only')
+		}
+	
 }
 
 // Hamburger Menu
