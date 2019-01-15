@@ -8,6 +8,8 @@ window.onload = pageLoad;
 
 // Show DSGVO pop-up only on first visit
 const dsgvo = document.querySelector('#dsgvo');
+const button1 = document.getElementsByClassName('okay');
+const button2 = document.getElementsByClassName('not-okay');
 
 function checkDsgvo() {
 
@@ -20,6 +22,8 @@ function checkDsgvo() {
 
 function showDsgvo() {
 	//show only on first visit
+		button1.setAttribute('aria-hidden', 'false');
+		button2.setAttribute('aria-hidden', 'false');
 		dsgvo.className = 'dsgvo';
 		localStorage.setItem('secondVisit', 'true');
 }
@@ -30,6 +34,8 @@ const buttonOkay = document.querySelector('.okay');
 buttonOkay.addEventListener('click', () => {
 	dsgvo.className = 'dsgvo.done';
 	localStorage.setItem('secondVisit', 'true');
+	button1.setAttribute('aria-hidden', 'true');
+	button2.setAttribute('aria-hidden', 'true');
 })
 
 const buttonNo = document.querySelector('.not-okay');
@@ -37,6 +43,8 @@ buttonNo.addEventListener('click', () => {
 	dsgvo.className = 'dsgvo.done';
 	location.href = 'datenschutz.html';
 	localStorage.setItem('secondVisit', 'true');
+	button1.setAttribute('aria-hidden', 'true');
+	button2.setAttribute('aria-hidden', 'true');
 })
 
 // Fetch data
