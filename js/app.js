@@ -43,8 +43,7 @@ buttonNo.addEventListener('click', () => {
 function addData() { 
 	
 	// Data to impressum
-
-	if (document.body.className === 'fetchData') {
+	if (document.body.className === 'impressum') {
 
 		glv.forEach(function(mitglied) {
 		let newP = document.createElement('p');
@@ -55,8 +54,19 @@ function addData() {
 		document.getElementById("glv").appendChild(newP);
 		})
 
+	// Data to buchen
+	} else if (document.body.className === 'buchen') {
+		let buchenP = document.createElement('p');
+		const buchenLine = document.createElement('br');
+		let buchenContent = document.createTextNode("Telefon: " + kontakt.Telefon);
+		buchenP.appendChild(buchenContent);
+		buchenP.appendChild(buchenLine);
+		document.getElementById('buchen').appendChild(buchenP);
+		buchenContent = document.createTextNode("Mail: " + kontakt.Mail);
+		buchenP.appendChild(buchenContent);
+		document.getElementById('buchen').appendChild(buchenP);
 	} else {
-		console.log('Works on Impressum only')
+		console.log('No data fetch on this page')
 		}
 	
 }
