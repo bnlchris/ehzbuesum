@@ -77,6 +77,76 @@ function addData() {
 		buchenContent = document.createTextNode("Mail: " + kontakt.Mail);
 		buchenP.appendChild(buchenContent);
 		document.getElementById('buchen').appendChild(buchenP);
+	
+	// Data to preise
+	} else if (document.body.className === 'preise') {
+		// create content for table
+
+		// Nebensaison 1
+		let preiseP = document.createElement('td');
+		let preiseH = document.createTextNode("Nebensaison*");
+		preiseP.appendChild(preiseH);
+		document.querySelector('.nebensaison1').appendChild(preiseP);
+		// data to table (first row)
+		let preiseTd = document.createElement('td');
+		let preiseContent = document.createTextNode(preise.Nebensaison_M);
+		preiseTd.appendChild(preiseContent);
+		document.querySelector('.nebensaison1').appendChild(preiseTd);
+		// data to table (second row)
+		preiseTd = document.createElement('td');
+		preiseContent = document.createTextNode(preise.Nebensaison_R);
+		preiseTd.appendChild(preiseContent);
+		document.querySelector('.nebensaison1').appendChild(preiseTd);
+
+		// Hauptsaison
+		preiseP = document.createElement('td');
+		preiseH = document.createTextNode("Hauptsaison*");
+		preiseP.appendChild(preiseH);
+		document.querySelector('.hauptsaison').appendChild(preiseP);
+		// data to table (first row)
+		preiseTd = document.createElement('td');
+		preiseContent = document.createTextNode(preise.Hauptsaison_M);
+		preiseTd.appendChild(preiseContent);
+		document.querySelector('.hauptsaison').appendChild(preiseTd);
+		// data to table (second row)
+		preiseTd = document.createElement('td');
+		preiseContent = document.createTextNode(preise.Hauptsaison_R);
+		preiseTd.appendChild(preiseContent);
+		document.querySelector('.hauptsaison').appendChild(preiseTd);
+
+		// Nebensaison2
+		preiseP = document.createElement('td');
+		preiseH = document.createTextNode("Nebensaison*");
+		preiseP.appendChild(preiseH);
+		document.querySelector('.nebensaison2').appendChild(preiseP);
+		// data to table (first row)
+		preiseTd = document.createElement('td');
+		preiseContent = document.createTextNode(preise.Nebensaison_M);
+		preiseTd.appendChild(preiseContent);
+		document.querySelector('.nebensaison2').appendChild(preiseTd);
+		// data to table (second row)
+		preiseTd = document.createElement('td');
+		preiseContent = document.createTextNode(preise.Nebensaison_R);
+		preiseTd.appendChild(preiseContent);
+		document.querySelector('.nebensaison2').appendChild(preiseTd);
+
+		// fetch data for seasons
+		let saisonP = document.createElement('p');
+		let saisonContent= document.createTextNode(saison.Nebensaison_Fruehling);
+		saisonP.appendChild(saisonContent);
+		document.querySelector('.saison1').appendChild(saisonP);
+
+		saisonP = document.createElement('p');
+		saisonContent= document.createTextNode(saison.Hauptsaison);
+		saisonP.appendChild(saisonContent);
+		document.querySelector('.saison2').appendChild(saisonP);
+
+		saisonP = document.createElement('p');
+		saisonContent= document.createTextNode(saison.Nebensaison_Herbst);
+		saisonP.appendChild(saisonContent);
+		document.querySelector('.saison3').appendChild(saisonP);
+
+	// Print message to console
 	} else {
 		console.log('No data fetch on this page')
 		}
