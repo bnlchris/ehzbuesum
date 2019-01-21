@@ -259,9 +259,94 @@ main {
 	color: GoldenRod;
 }
 
-/* Slide show on eindruecke.html */
+/*
+Slide show on eindruecke.html 
+Credits to https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/
+*/
 
+.slideshow {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 
+.slideshow li span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	color: transparent;
+	background-position: 50% 50%;
+	z-index: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	animation: imageAnimation 21s linear infinite 0s;
+}
+
+.slideshow li div {
+	z-index: 3;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0;
+	color: black;
+	animation: titleAnimation 21s linear infinite 0s;
+}
+
+.slideshow li div h3 {
+	font-family: sans-serif;
+	font-size: 60px;
+	padding-bottom: 0;
+	line-height: 50px;
+	text-align: left;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.slideshow li:nth-child(1) span {
+	background: url('../img/preise_desktop.jpg');
+}
+.slideshow li:nth-child(2) span {
+	background: url('../img/fruehstueck_desktop.jpg');
+	animation-delay: 7s;
+}
+.slideshow li:nth-child(3) span {
+	background: url('../img/einzel_desktop.jpg');
+	animation-delay: 14s;
+}
+
+.slideshow li:nth-child(2) div {
+	animation-delay: 7s;
+}
+.slideshow li:nth-child(3) div {
+	animation-delay: 14s;
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
 
 /* Footer CSS */
 
@@ -308,6 +393,7 @@ footer {
 
 .dsgvo.done {
 	visibility: hidden;
+	z-index: -1;
 }
 
 button {
@@ -339,6 +425,37 @@ button:focus {
 		font-size: 0.9em;
 	}
 
+	.slideshow li:nth-child(1) span {
+		background: url('../img/preise_tablet.jpg');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+	}
+	.slideshow li:nth-child(2) span {
+		background: url('../img/fruehstueck_tablet.jpg');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		animation-delay: 7s;
+	}
+	.slideshow li:nth-child(3) span {
+		background: url('../img/einzel_tablet.jpg');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		animation-delay: 14s;
+	}
+
+	.slideshow li div h3 {
+		font-size: 40px;
+	}
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -350,4 +467,36 @@ button:focus {
 	th, td, tr {
 		font-size: 0.8em;
 	}
+
+	.slideshow li:nth-child(1) span {
+		background: url('../img/preise_mobil.jpg');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+	}
+	.slideshow li:nth-child(2) span {
+		background: url('../img/fruehstueck_mobil.jpg');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		animation-delay: 7s;
+	}
+	.slideshow li:nth-child(3) span {
+		background: url('../img/einzel_mobil.jpg');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		animation-delay: 14s;
+	}
+
+	.slideshow li div h3 {
+		font-size: 30px;
+	}
+
 }

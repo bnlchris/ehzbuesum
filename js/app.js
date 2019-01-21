@@ -19,6 +19,7 @@ function checkDsgvo() {
 		dsgvo.className = 'dsgvo.done';
 		button1.tabIndex = -1;
 		button2.tabIndex = -1;
+		dsgvo.style.display = 'none';
 	}
 }
 
@@ -39,6 +40,7 @@ button1.addEventListener('click', () => {
 	button2.setAttribute('aria-hidden', 'true');
 	button1.tabIndex = -1;
 	button2.tabIndex = -1;
+	dsgvo.style.display = 'none';
 })
 
 button2.addEventListener('click', () => {
@@ -49,6 +51,7 @@ button2.addEventListener('click', () => {
 	button2.setAttribute('aria-hidden', 'true');
 	button1.tabIndex = -1;
 	button2.tabIndex = -1;
+	dsgvo.style.display = 'none';
 })
 
 // Fetch data
@@ -187,6 +190,6 @@ function toggleSize() {
 		bodyText.className = 'content-other';
 		}
 	} else {
-		console.log("Auf der Startseite kann die Schriftgröße nicht geändert werden");
+		console.log("Auf dieser Seite kann die Schriftgröße nicht geändert werden");
 	}
 }
