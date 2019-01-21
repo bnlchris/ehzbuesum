@@ -27,7 +27,7 @@ const preise = {
 }
 
 const saison = {
-	Nebensaison_Fruehling: "Platzhalter",
-	Hauptsaison: "Platzhalter",
-	Nebensaison_Herbst: "Platzhalter"
+	Nebensaison_Fruehling: "01.02. - 25.03.2019",
+	Hauptsaison: "26.03. - 30.09.2019",
+	Nebensaison_Herbst: "01.10. - 01.12.2019"
 }
