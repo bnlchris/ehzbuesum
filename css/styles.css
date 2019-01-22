@@ -468,6 +468,14 @@ button:focus {
 		font-size: 0.8em;
 	}
 
+	.slideshow li div h3 {
+		font-size: 30px;
+	}
+
+}
+
+@media only screen and (max-width: 400px) {
+
 	.slideshow li:nth-child(1) span {
 		background: url('../img/preise_mobil.jpg');
 		background-repeat: no-repeat;
@@ -493,10 +501,6 @@ button:focus {
 		left: 0;
 		right: 0;
 		animation-delay: 14s;
-	}
-
-	.slideshow li div h3 {
-		font-size: 30px;
 	}
 
 }
