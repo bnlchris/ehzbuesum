@@ -149,7 +149,19 @@ function addData() {
 		saisonP.appendChild(saisonContent);
 		document.querySelector('.saison3').appendChild(saisonP);
 
-	// Print message to console
+	// Data to anfahrt
+	} else if (document.body.className === 'anfahrt') {
+		let anfahrtP = document.createElement('p');
+		let anfahrtLine = document.createElement('br');
+		let anfahrtContent = document.createTextNode(kontakt.Straße);
+		anfahrtP.appendChild(anfahrtContent);
+		anfahrtP.appendChild(anfahrtLine);
+		document.getElementById('adresse').appendChild(anfahrtP);
+		anfahrtContent = document.createTextNode(kontakt.Ort);
+		anfahrtP.appendChild(anfahrtContent);
+		document.getElementById('adresse').appendChild(anfahrtP);
+
+	// Print message to console	
 	} else {
 		console.log('No data fetch on this page')
 		}

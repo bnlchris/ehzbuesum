@@ -348,6 +348,12 @@ Credits to https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-s
 	opacity: 1;
 }
 
+/* Anfahrt */
+
+.googleMaps {
+	text-align: left;
+}
+
 /* Footer CSS */
 
 footer {
