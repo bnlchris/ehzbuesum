@@ -29,6 +29,13 @@ let urlsToCache = [
         '/ehzbuesum/img/impressum_desktop.jpg',
         '/ehzbuesum/img/preise_desktop.jpg',
         '/ehzbuesum/img/willkommen_desktop.jpg',
+        '/ehzbuesum/img/anfahrt_tablet.jpg',
+        '/ehzbuesum/img/datenschutz_tablet.jpg',
+        '/ehzbuesum/img/einzel_tablet.jpg',
+        '/ehzbuesum/img/fruehstueck_tablet.jpg',
+        '/ehzbuesum/img/impressum_tablet.jpg',
+        '/ehzbuesum/img/preise_tablet.jpg',
+        '/ehzbuesum/img/willkommen_tablet.jpg',
 ]
 
 // Service Worker should return requests with cache, otherwise fetch data from network
