@@ -41,7 +41,6 @@ let urlsToCache = [
         '/ehzbuesum/img/willkommen_desktop.jpg',
         '/ehzbuesum/img/willkommen_tablet.jpg',
         '/ehzbuesum/img/willkommen_mobil.jpg',
-        '/ehzbuesum/img/10.jpg',
         '/ehzbuesum/js/app.js',
         '/ehzbuesum/js/data.js'
 ]
