@@ -74,12 +74,7 @@ function addData() {
 		// Data to buchen
 	} else if (document.body.className === 'buchen') {
 		var buchenP = document.createElement('p');
-		var buchenLine = document.createElement('br');
 		var buchenContent = document.createTextNode("Telefon: " + kontakt.Telefon);
-		buchenP.appendChild(buchenContent);
-		buchenP.appendChild(buchenLine);
-		document.getElementById('buchen').appendChild(buchenP);
-		buchenContent = document.createTextNode("Mail: " + kontakt.Mail);
 		buchenP.appendChild(buchenContent);
 		document.getElementById('buchen').appendChild(buchenP);
 
