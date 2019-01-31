@@ -91,7 +91,16 @@
 		</div>
 	</footer>
 
-	<script src="js/app.js"></script>
+	<!-- Use JavaScript according to browser -->
+
+	<!--[if IE]>
+		<script src="js/app.js"></script>
+		<script src="js/data.js"></script>
+	<![endif]-->
+
+	<!--[if !IE]>-->
+	<script src="js/app - ES6.js"></script>
 	<script src="js/data.js"></script>
+	<!--<![endif]-->
 
 </body>
