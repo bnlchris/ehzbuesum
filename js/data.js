@@ -14,7 +14,7 @@ const glv = [
 const kontakt = {
 	Straße: "Möwenweg 14",
 	Ort: "25761 Büsum",
-	Telefon: "(04834) 952515",
+	Telefon: "(04834) 95250",
 	Fax: "(04834) 952515",
 	Mail: "ehz-buesum@sovd-sh.de"
 }
